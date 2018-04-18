@@ -13,16 +13,16 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 public class DbConfig {
 
     @Value("${guru.username}")
-    public String user;
+    String user;
 
     @Value("${guru.passwo}")
     String pass;
 
     @Value("${guru.url}")
     String url;
-    
+
     @Bean
-    PropertySourcesPlaceholderConfigurer properties(){
+    public static PropertySourcesPlaceholderConfigurer properties(){
         PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer =new PropertySourcesPlaceholderConfigurer();
         return  propertySourcesPlaceholderConfigurer;
     }
